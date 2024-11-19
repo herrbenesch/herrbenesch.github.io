@@ -1,0 +1,125 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import AboutMe from '../components/AboutMe.astro';
+import Experience from '../components/Experience.astro';
+import Skills from '../components/Skills.astro';
+import Education from '../components/Education.astro';
+import Connect from '../components/Connect.astro';
+
+const experiences = [
+  {
+    title: "Senior Software Engineer",
+    company: "voiio GmbH",
+    location: "Berlin",
+    period: "2022 - present",
+    achievements: [
+      "Developed platform supporting 80,000+ registered users for employee wellbeing",
+      "Built dashboards for platform usage insights using Metabase",
+      "Managed platform health using Sentry, Dependabot, Papertrail, Heroku",
+      "Provided second level technical support to product stakeholders",
+      "Tech stack: Python, Django, dramatiq, Lit"
+    ]
+  },
+  {
+    title: "Senior Software Engineer",
+    company: "Sonnen GmbH",
+    location: "Berlin",
+    period: "2021 - 2022",
+    achievements: [
+      "Developed in-house automatic invoice management solution",
+      "Built and maintained microservices in AWS using Terraform",
+      "Participated in technical hiring process"
+    ]
+  },
+  {
+    title: "Team Lead Software Engineering",
+    company: "Thermondo GmbH",
+    location: "Berlin",
+    period: "2020 - 2021",
+    achievements: [
+      "Led team of 5 developers, managing technical planning and people development",
+      "Introduced growth plans for individual contributors",
+      "Led hiring process for Python and Django developers"
+    ]
+  },
+  {
+    title: "Software Developer",
+    company: "Thermondo GmbH",
+    location: "Berlin",
+    period: "2015 - 2020",
+    achievements: [
+      "Developed internal tools using Python and Django for heating system installations",
+      "Created API interfaces with heating parts suppliers",
+      "Led development of fulfillment tracking application",
+      "Tech stack: Python, Django, DRF, Postgres, Celery, JavaScript"
+    ]
+  }
+];
+
+const skills = {
+  backend: ["Python", "Django", "dramatiq", "Celery"],
+  frontend: ["JavaScript", "Lit.js", "HTML", "Bootstrap"],
+  infrastructure: ["AWS", "Heroku", "Git", "CI/CD"],
+  databases: ["PostgreSQL", "CSS"],
+  other: ["REST APIs", "Agile", "Team Leadership"]
+};
+
+const education = [
+  {
+    degree: "Master of Science in Renewable Energies",
+    institution: "University of Applied Sciences, Berlin",
+    period: "2012 - 2014",
+    grade: "GPA: 1.2",
+    details: ["Master's Thesis: Power curve measurement for web-based data monitoring application"]
+  },
+  {
+    degree: "Bachelor of Science in Renewable Energies",
+    institution: "University of Applied Sciences, Berlin",
+    period: "2009 - 2012",
+    grade: "GPA: 2.4"
+  }
+];
+
+const socialLinks = [
+  {
+    platform: "LinkedIn",
+    url: "https://www.linkedin.com/in/joerg-benesch"
+  },
+  {
+    platform: "GitHub",
+    url: "https://github.com/herrbenesch"
+  },
+  {
+    platform: "Stack",
+    url: "https://stackshare.io/herrbenesch/my-stack"
+  },
+  {
+    platform: "Email",
+    url: "mailto:"
+  }
+];
+---
+
+<Layout title="Jörg Benesch - Senior Software Engineer">
+  <main class="max-w-4xl mx-auto px-6 py-20">
+    <Header 
+      name="Jörg Benesch" 
+      title="Senior Software Engineer"
+      location="Berlin, Germany"
+      email=""
+    />
+    
+    <AboutMe 
+      content="Senior Software Engineer with 11+ years of experience in full-stack development, specializing in Python, Django, and modern web technologies. Proven track record in backend development and building scalable applications. Passionate about clean code, technical mentorship, and solving complex problems."
+    />
+    
+    <Experience experiences={experiences} />
+    
+    <Skills categories={skills} />
+
+    <Education education={education} />
+    
+    <Connect links={socialLinks} />
+  </main>
+</Layout>

@@ -1,0 +1,28 @@
+---
+interface SocialLink {
+  platform: string;
+  url: string;
+}
+
+interface Props {
+  links: SocialLink[];
+}
+
+const { links } = Astro.props;
+---
+
+<section class="mb-20 animate-slide-up">
+  <h2 class="text-3xl font-semibold mb-8 text-gray-800">Connect</h2>
+  <div class="flex flex-wrap gap-4">
+    {links.map((link) => (
+      <a 
+        href={link.url} 
+        target="_blank" 
+        rel="noopener noreferrer" 
+        class="px-6 py-3 bg-white shadow-sm border border-gray-100 rounded-lg text-gray-700 hover:border-blue-300 hover:text-blue-600 transition-all duration-200 hover:-translate-y-0.5 transform"
+      >
+        {link.platform}
+      </a>
+    ))}
+  </div>
+</section>
