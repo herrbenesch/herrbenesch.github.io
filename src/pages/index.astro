@@ -12,13 +12,12 @@ const experiences = [
     title: "Senior Software Engineer",
     company: "voiio GmbH",
     location: "Berlin",
-    period: "2022 - present",
+    period: "2022 - 2024",
     achievements: [
-      "Developed platform supporting 80,000+ registered users for employee wellbeing",
-      "Built dashboards for platform usage insights using Metabase",
+      "Developed platform supporting 74,000+ registered users for employee wellbeing",
+      "Built dashboard for platform usage insights using Metabase",
       "Managed platform health using Sentry, Dependabot, Papertrail, Heroku",
-      "Provided second level technical support to product stakeholders",
-      "Tech stack: Python, Django, dramatiq, Lit"
+      "Tech stack: Python, Django, dramatiq, Vue, Lit"
     ]
   },
   {
@@ -58,11 +57,11 @@ const experiences = [
 ];
 
 const skills = {
-  backend: ["Python", "Django", "dramatiq", "Celery"],
-  frontend: ["JavaScript", "Lit.js", "HTML", "Bootstrap"],
-  infrastructure: ["AWS", "Heroku", "Git", "CI/CD"],
-  databases: ["PostgreSQL", "CSS"],
-  other: ["REST APIs", "Agile", "Team Leadership"]
+  backend: ["Python", "Django", "FastAPI", "Flask", "Celery", "dramatiq"],
+  frontend: ["JavaScript", "Vue.js", "HTML", "CSS", "Bootstrap", "HTMX"],
+  infrastructure: ["AWS", "Terraform", "Heroku", "Git", "CI/CD", "Docker"],
+  databases: ["PostgreSQL", "SQL"],
+  other: ["REST APIs", "SOAP", "EDIFACT", "Agile", "Team Leadership"]
 };
 
 const education = [
@@ -93,25 +92,20 @@ const socialLinks = [
   {
     platform: "Stack",
     url: "https://stackshare.io/herrbenesch/my-stack"
-  },
-  {
-    platform: "Email",
-    url: "mailto:"
   }
 ];
 ---
 
 <Layout title="Jörg Benesch - Senior Software Engineer">
-  <main class="max-w-4xl mx-auto px-6 py-20">
+  <main class="max-w-3xl mx-auto px-6 py-16">
     <Header 
       name="Jörg Benesch" 
       title="Senior Software Engineer"
       location="Berlin, Germany"
-      email=""
     />
     
     <AboutMe 
-      content="Senior Software Engineer with 11+ years of experience in full-stack development, specializing in Python, Django, and modern web technologies. Proven track record in backend development and building scalable applications. Passionate about clean code, technical mentorship, and solving complex problems."
+      content="Senior Software Engineer with 9+ years of experience in full-stack development, specializing in Python, Django, and modern web technologies. Proven track record in team leadership and building scalable applications. Passionate about clean code, technical mentorship, and solving complex problems."
     />
     
     <Experience experiences={experiences} />
